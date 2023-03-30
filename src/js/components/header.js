@@ -1,4 +1,3 @@
-// import getDocumentScrollHeight from "../functions/get-document-scrollHeight";
 import vars from '../_vars'
 
 window.addEventListener('scroll', function() {

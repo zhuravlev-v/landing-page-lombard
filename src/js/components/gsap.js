@@ -199,36 +199,6 @@ function animateTick() {
   const stage1 = 'M531 147.008L500.508 117.5L486.008 132L516.008 162L531 147.008Z'
   const stage2 = 'M568.507 109.5L554.007 95.0001L501.5 147.492L516.007 162L568.507 109.5Z'
 
-  // tl1
-  // .to('#tick1', {
-  //   opacity: 1,
-  //   duration: 0.1,
-  //   delay: 0.4,
-  //   onComplete() {
-  //     console.log('complete')
-  //   }
-  // })
-  // .to('#tick1', {
-  //   attr: { d: stage1 },
-  //   ease: Power2.easeIn,
-  //   duration: 0.35,
-  // })
-  // .to('#tick2', {
-  //   opacity: 1,
-  //   duration: 0,
-  // })
-  // .to('#tick2', {
-  //   attr: { d: stage2 },
-  //   ease: Power2.easeIn,
-  //   duration: 0.35,
-  // })
-
-  // ScrollTrigger.create({
-  //   animation: tl1,
-  //   trigger: '#thirtyMinSection',
-  // })
-
-
   ScrollTrigger.batch("#thirtyMinSection", {
     start: 'top center',
     onEnter: (elements, triggers) => {
@@ -263,20 +233,9 @@ function animateHero() {
   const xBigCar = svgWidth * 12.59 / 100
   const yBigCar = svgWidth * 4.39 / 100
 
-  // -758, -225
-  // const xRoadLineFrom = (svgWidth * 2.95 / 100) + -758
-  // const yRoadLineFrom = (svgWidth * 4.84 / 100) + -225
-
-  // transform: translate(-1516px, -713px)
-  // const xRoadLineTo = (svgWidth * 159.74 / 100 * -1) + -758
-  // const yRoadLineTo = (svgWidth * 75.13 / 100 * -1) + -225
-  // 
   const xRoadLineTo = -1516
   const yRoadLineTo = -713
   
-  // const xRoadLineTo = (svgWidth * 35.4 / 100 * -1) + -758
-  // const yRoadLineTo = (svgWidth * 37.09 / 100 * -1) + -225
-
   tl2
   .to('#bigCar', {
     x: xBigCar,

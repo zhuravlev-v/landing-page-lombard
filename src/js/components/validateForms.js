@@ -107,7 +107,6 @@ forms.forEach((form, index) => {
       })
 
       input.addEventListener('blur', (event) => {
-        // event.target.value = event.target.getAttribute('data-value-origin')
         if (event.target.classList.contains('just-validate-error-field')) {
           event.target.value = ''
         }
