@@ -1,0 +1,25 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/modal";
+@import "./components/modal-form";
+@import "./components/form";
+@import "./components/header";
+@import "./components/header-mobile";
+@import "./components/burger";
+@import "./components/choice-block";
+@import "./components/footer";
+@import "./components/s-home";
+@import "./components/s-how-it-works";
+@import "./components/s-thirty-min";
+@import "./components/s-why-us";
+@import "./components/s-simple-conditions";
+@import "./components/s-vehicles";
+@import "./components/s-best-conditions";
+@import "./components/s-rate";
+@import "./components/s-for-new";
+@import "./components/s-contacts";

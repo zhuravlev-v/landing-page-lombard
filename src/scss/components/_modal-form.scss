@@ -1,0 +1,22 @@
+.modal-form {
+  padding: 80px 20px 80px;
+
+  &__btn {
+    right: 20px;
+    top: 20px;
+  }
+
+  &__title {
+    font-size: 42px;
+    margin-bottom: 25px;
+  }
+
+  &__form {
+    font-size: 1.4em;
+    width: 100%;
+
+    & .form__input {
+      border-color: $black-color;
+    }
+  }
+}

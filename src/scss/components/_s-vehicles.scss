@@ -1,0 +1,111 @@
+.vehicles {
+  font-size: 10px;
+  color: $white-color;
+  background-color: $dark-blue-color;
+  padding: 0px 0px 60px;
+  position: relative;
+
+  & img {
+    width: 100%;
+  }
+
+  &__top {
+    width: 100%;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 0px;
+  }
+  &__top-container {
+  }
+  &__top-img {
+    max-width: 690px;
+    // min-height: 347px;
+    margin: 0 auto;
+  }
+
+  &__container {
+    max-width: calc(1070px + $container-offset * 2)
+  }
+
+  &__header {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+
+    @include medium {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__title {
+    font-size: 6.4em;
+    // max-width: 630px;
+    margin: 0px auto;
+
+    @include medium {
+      font-size: 3.6em;
+    }
+    @media (max-width: 340px) {
+      font-size: 3.3em;
+    }
+  }
+
+  &__title_orange {
+    display: inline-block;
+    color: #ED5100;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 15px;
+
+    @include medium {
+      flex-direction: column;
+      row-gap: 60px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 310px;
+    align-self: baseline;
+
+    @include medium {
+      align-self: center;
+    }
+
+    &:nth-child(4) {
+      margin-left: auto;
+      margin-right: 18%;
+
+      & .vehicles__item-img {
+        max-width: 210px;
+        margin: 0 auto;
+      }
+
+      @include medium {
+        margin: 0;
+      }
+    }
+    &:nth-child(5) {
+      margin-right: auto;
+
+      @include medium {
+        margin: 0;
+      }
+    }
+  }
+
+  &__item-img {}
+
+  &__item-desc {
+    font-weight: 700;
+    font-size: 3.2em;
+    line-height: 99%;
+    text-align: center;
+    margin-top: 15px;
+  }
+}

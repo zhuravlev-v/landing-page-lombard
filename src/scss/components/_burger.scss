@@ -1,0 +1,4 @@
+.burger {
+  @include burger;
+  &__line {}
+}

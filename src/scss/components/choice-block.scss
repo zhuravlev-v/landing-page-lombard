@@ -1,0 +1,33 @@
+.choice-block {
+  font-size: 1em;
+  color: $black-color;
+  background: $white-color;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 15px;
+  padding: 30px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__title {
+    font-weight: 600;
+    font-size: 1.8em;
+    line-height: 99%;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 1.6em;
+    line-height: 99%;
+    color: rgba($color: $black-color, $alpha: 0.5);
+
+    &:not(:last-child) {
+      margin-bottom: 2px;
+    }
+  }
+
+  &__btn {
+    margin-top: auto;
+  }
+}

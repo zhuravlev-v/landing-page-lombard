@@ -1,0 +1,165 @@
+.home {
+  font-size: 10px;
+  color: $black-color;
+  position: relative;
+  background-color: #F5F6FF;
+  display: flex;
+  flex-direction: column;
+  // justify-content: flex-end;
+  
+  @include extra-big {
+    min-height: 100vh;
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    & .home-image {
+      width: 67.13%;
+      height: auto;
+      display: block;
+      position: relative;
+      left: 100%;
+      transform: translateX(-100%);
+
+      @include big {
+        width: 77.13%;
+      }
+      @include small {
+        width: 100%;
+      }
+    }
+  }
+
+  &__container {
+    max-width: calc(1185px + $container-offset * 2);
+    width: 100%;
+    margin-bottom: 90px;
+    position: relative;
+    z-index: 1;
+    margin-top: 33.3vh;
+    
+    @include big {
+      // margin-top: 9.53vh;
+      // margin-left: 16px;
+      margin: 9.53vh auto 90px;
+    }
+    @include small {
+      margin: min(29.53vh, 29.53vw) auto 20px;
+    }
+  }
+
+  &__content {
+  }
+
+  &__header {
+    max-width: 995px;
+    text-align: start;
+    margin-bottom: 80px;
+    font-size: 8em;
+
+    @include big {
+      font-size: 4.8em;
+      max-width: 600px;
+    }
+    @include small {
+      font-size: 3em;
+    }
+  }
+
+  &__title {
+    font-size: unset;
+  }
+
+  &__title_blue {
+    color: $light-blue-color;
+  }
+
+  &__title_orange {
+    color: $orange-color;
+  }
+
+  &__form {
+    background-color: $white-color;
+    box-shadow: 0px 7px 33px rgba($color: $black-color, $alpha: 0.09);
+    border-radius: 15px;
+    padding: 25px 30px 30px;
+    max-width: 1070px;
+    margin: 0 auto;
+
+    @include small {
+      padding: 25px 16px 35px;
+    }
+
+    & .form {
+      font-size: 1.4em;
+    }
+
+    & .form__input {
+      border-color: $black-color;
+    }
+  }
+
+  &__form-header {
+    margin-bottom: 25px;
+  }
+
+  &__form-title {
+    font-weight: 500;
+    font-size: 3.2em;
+    line-height: 99%;
+    color: #000000;
+    text-transform: unset;
+    text-align: center;
+
+    @include small {
+      font-size: 2.4em;
+    }
+  }
+
+  &__form-error-container {
+    font-size: 1.6em;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 10px;
+
+    @include medium {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__form-text {
+    font-weight: 500;
+    font-size: 1.7em;
+    line-height: 99%;
+
+    @include medium {
+      grid-column: span 2;
+      font-size: 1.4em;
+    }
+    
+    &_end {
+      justify-self: end;
+      @include medium {
+        margin-top: 40px;
+        justify-self: center;
+      }
+    }
+    &_start {
+      justify-self: start;
+      @include medium {
+        justify-self: center;
+      }
+    }
+    &_center {
+      justify-self: center;
+    }
+  }
+}

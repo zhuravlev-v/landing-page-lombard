@@ -1,0 +1,103 @@
+.thirty-min {
+  font-size: 10px;
+  color: $black-color;
+  margin: 90px 0px 60px;
+
+  &__container {
+    max-width: calc(1256px + $container-offset * 2);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    @include medium {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__content {
+    max-width: 410px;
+
+    @include medium {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &__header {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    width: 153%;
+
+    @include medium {
+      width: 100%;
+      font-size: 3.6em;
+    }
+  }
+
+  &__title_blue {
+    color: $light-blue-color;
+    word-break: break-word;
+  }
+
+  &__subtitle {
+    font-size: 2.4em;
+    line-height: 130%;
+    margin-top: 10px;
+
+    @include medium {
+      font-size: 2em;
+    }
+  }
+
+  &__form {
+    font-size: 1.4em;
+
+    & .form__input {
+      border-color: $black-color;
+    }
+  }
+
+  &__form-error-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    height: fit-content;
+
+    @include medium {
+      width: 100%;
+    }
+
+    & svg {
+      width: 100%;
+      height: auto;
+      max-width: 786px;
+
+      @include medium {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+#tick {
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  -webkit-transition: stroke-dashoffset 1s 0.5s ease-out;
+  -moz-transition: stroke-dashoffset 1s 0.5s ease-out;
+  -ms-transition: stroke-dashoffset 1s 0.5s ease-out;
+  -o-transition: stroke-dashoffset 1s 0.5s ease-out;
+  transition: stroke-dashoffset 1s 0.5s ease-out;
+}
+.drawn + svg #tick {
+  opacity: 1;
+  stroke-dashoffset: 0;
+}

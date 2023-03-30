@@ -1,0 +1,37 @@
+<div class="graph-modal">
+
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="success">
+    <div class="graph-modal__content">
+      <h2 class="modal__title">ваша заявка отправлена</h2>
+      <p class="modal__text">Наш менеджер скоро свяжется с вами</p>
+      <button class="btn modal__close js-modal-close" aria-label="Закрыть модальное окно">Вернуться</button>
+    </div>
+  </div>
+
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="fail">
+    <div class="graph-modal__content">
+      <h2 class="modal__title">Ошибка отправки</h2>
+      <p class="modal__text">Повторите попыптку позже</p>
+      <button class="btn modal__close js-modal-close" aria-label="Закрыть модальное окно">Вернуться</button>
+    </div>
+  </div>
+
+  <div class="graph-modal__container modal-form" role="dialog" aria-modal="true" data-graph-target="modal-form">
+    <div class="graph-modal__content">
+      <button class="modal-form__btn graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+      <h3 class="modal-form__title">Заполните форму</h3>
+      <form id="form-5" class="modal-form__form form form_column">
+        <input type="text" name="" placeholder="Ваше имя" id="" class="form__input input-reset">
+        <input type="tel" name="" placeholder="+7 (___) ___-__-__" id="" class="form__input input-reset">
+        <button type="submit" class="form__submit btn">Отправить заявку</button>
+        <a href="#" class="form__link form__link_telegram">
+          <span>Связаться в Телеграм</span>
+        </a>
+        <a href="#" class="form__link form__link_whatsapp">
+          <span>Связаться в WhatsApp</span>
+        </a>
+      </form>
+    </div>
+  </div>
+
+</div>

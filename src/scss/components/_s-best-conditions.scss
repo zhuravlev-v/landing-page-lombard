@@ -1,0 +1,154 @@
+.best-conditions {
+  font-size: 10px;
+  color: $black-color;
+  margin: 60px 0px;
+
+  &__container {
+    max-width: calc(1000px + $container-offset * 2);
+    padding-bottom: 60px;
+  }
+
+  &__inner {}
+
+  &__header {
+    text-align: center;
+    margin-bottom: 40px;
+
+    @include medium {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__title {}
+
+  &__blocks {
+    @include medium {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    @include medium {
+      flex-direction: column-reverse;
+
+      &:nth-child(even) {
+        flex-direction: column-reverse;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  &__block-content {}
+
+  &__block-title {
+    font-weight: 700;
+    font-size: 3.6em;
+    line-height: 99%;
+    color: $light-blue-color;
+    margin-bottom: 20px;
+  }
+
+  &__block-list {
+    font-size: 1.6em;
+    line-height: 130%;
+    padding-left: 1.6em;
+  }
+
+  &__block-list-item {
+    list-style-type: disc;
+    
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__block-img {}
+
+  &__bottom {
+    background-color: rgba($color: #00497E, $alpha: 0.1);
+    padding: 60px 0px;
+
+    @include medium {
+      padding: 60px 0px 30px;
+    }
+
+    &-container {}
+
+    &-inner {}
+
+    &-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    &-title {}
+
+    &-blocks {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      // grid-auto-rows: 382px;
+      gap: 30px;
+
+      @include medium {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &-block {
+      background-color: $white-color;
+      border-radius: 15px;
+      padding: 44px 14px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      @include medium {
+        padding: 30px 16px;
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+
+    &-block-img {
+      max-width: 100%;
+
+      & img {
+        display: block;
+        margin: 0 auto 20px;
+      }
+    }
+
+    &-block-title {
+      font-weight: 700;
+      font-size: 3.2em;
+      line-height: 99%;
+      text-align: center;
+      padding-bottom: 15px;
+    }
+
+    &-block-text {
+      font-size: 1.6em;
+      line-height: 130%;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.for-new {
+  font-size: 10px;
+  color: $white-color;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+
+  & a {
+    color: inherit;
+  }
+  
+  &__container {
+    max-width: calc(1290px + $container-offset * 2);
+  }
+
+  &__inner {
+    background-color: $dark-blue-color;
+    padding: 80px 140px;
+    box-shadow: 0px 7px 33px rgba($color: #000000, $alpha: 0.09);
+    border-radius: 15px;
+    
+    @include medium {
+      padding: 50px 16px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+
+    @include big {
+      font-size: 3.6em;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__title_blue {
+    color: $light-blue-color;
+  }
+
+  &__subtitle {
+    font-size: 2.4em;
+    line-height: 99%;
+    color: rgba($color: $white-color, $alpha: 0.8);
+  }
+
+  &__form {
+    font-size: 1.4em;
+
+    @include big {
+      // max-width: 500px;
+    }
+    
+    & .form__submit {
+      @include button-color-light($white-color, $light-blue-color);
+      padding: 16px 30px;
+    }
+  }
+
+  &__form-error-container {
+    & .just-validate-error-label {
+      color: $light-blue-color !important;
+    }
+  }
+}

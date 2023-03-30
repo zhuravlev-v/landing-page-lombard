@@ -1,0 +1,256 @@
+.footer {
+  font-size: 10px;
+  color: $white-color;
+  background-color: #303F46;
+
+  & a {
+    color: inherit;
+  }
+
+  & p {
+    margin: 0px;
+  }
+
+  &__container {
+    $container-offset: 40px;
+    padding: 0 $container-offset;
+    max-width: calc(1850px + $container-offset * 2);
+
+    @include big {
+      $container-offset: 30px;
+      padding: 0 $container-offset;
+      max-width: calc(1290px + $container-offset * 2);
+    }
+
+    @include small {
+      $container-offset: 16px;
+      padding: 0 $container-offset;
+    }
+  }
+
+  &__inner {
+    padding: 30px 0px 20px;
+  }
+
+  &__top {
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: minmax(220px, 300px) minmax(190px, 300px) minmax(220px, 373px) minmax(300px, 1fr);
+    column-gap: 10px;
+    row-gap: 30px;
+
+    @include big {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include small {
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+      margin-bottom: 40px;
+    }
+  }
+  
+  &__about {
+    @include small {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 25px;
+    width: 220px;
+    height: 54px;
+  }
+
+  &__nav {
+    font-weight: 500;
+    font-size: 2.4em;
+    line-height: 130%;
+    grid-column: 2/4;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(3, 32px);
+    row-gap: 15px;
+    column-gap: 70px;
+    grid-auto-columns: max-content;
+
+    @include big {
+      grid-column: unset;
+    }
+    @include small {
+      font-size: 1.6em;
+      margin-bottom: 40px;
+      display: block;
+    }
+
+    &-item {
+      text-transform: uppercase;
+      // transition: color 0.15s ease;
+
+      &:not(:last-child) {
+        margin-bottom: 13px;
+      }
+    }
+
+    &-link {
+      transition: color 0.15s ease;
+
+      &:hover {
+        color: $light-blue-color;
+      }
+    }
+  }
+
+  &__docs {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.6em;
+    line-height: 130%;
+
+    @include small {
+      margin-bottom: 60px;
+    }
+
+    &-item {
+      transition: color 0.15s ease;
+
+      &:not(:last-child) {
+        margin-bottom: 17px;
+      }
+
+      &:hover {
+        color: $light-blue-color;
+      }
+    }
+
+    &-link {}
+  }
+
+  &__contacts {
+    justify-self: end;
+    grid-column: 4/5;
+
+    @include big {
+      justify-self: unset;
+      grid-column: 2/3;
+      grid-row: 1;
+    }
+  }
+
+  &__number {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 2em;
+    line-height: 130%;
+    margin-bottom: 10px;
+  }
+
+  &__address {
+    font-size: 1.6em;
+    line-height: 130%;
+    opacity: 0.5;
+    &:not(:last-child) {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__bottom {
+    // display: flex;
+    // justify-content: space-between;
+    font-size: 1.4em;
+    line-height: 130%;
+    display: grid;
+    grid-template-columns: minmax(220px, 300px) minmax(190px, 300px) minmax(220px, 373px) minmax(300px, 1fr);
+    column-gap: 10px;
+
+    @include big {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include medium {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__legals {
+    // font-size: 1.4em;
+    // line-height: 130%;
+    opacity: 0.5;
+  }
+
+  &__author {
+    justify-self: end;
+    opacity: 1;
+
+    @include medium {
+      margin-top: 30px;
+    }
+  }
+}
+
+.about {
+  &__info {
+    font-size: 1.4em;
+    line-height: 130%;
+    opacity: 0.5;
+
+    & p:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.legals {
+  & p {
+    display: inline-block;
+  }
+
+  &__link {
+    &:hover {
+      text-decoration-line: underline;
+    }
+  }
+}
+
+.author {
+  font-size: 0.9em;
+  line-height: 140%;
+  min-width: 173px;
+
+  &__text {
+    vertical-align: middle;
+  }
+
+  &__link {
+    display: inline-block;
+    width: 56px;
+    height: 29px;
+    vertical-align: middle;
+    background-image: url('../img/2dit.svg');
+  }
+}
+
+.number {
+  &_no-logo {
+    & span {
+      vertical-align: unset;
+    }
+
+    &::before {
+      content: '';
+      display: none;
+    }
+  }
+
+  &_monochrome {
+    & span {
+      &:nth-child(2) {
+        color: inherit;
+      }
+    }
+  }
+}

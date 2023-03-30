@@ -1,0 +1,31 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+// :root {
+//   // base
+//   --font-family: "Futura PT", -apple-system, BlinkMacSystemFont, Roboto, Open Sans, Helvetica Neue, 'Noto Sans Armenian', 'Noto Sans Bengali', 'Noto Sans Cherokee', 'Noto Sans Devanagari', 'Noto Sans Ethiopic', 'Noto Sans Georgian', 'Noto Sans Hebrew', 'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans Lao', 'Noto Sans Osmanya', 'Noto Sans Tamil', 'Noto Sans Telugu', 'Noto Sans Thai', sans-serif;
+//   --content-width: 1275px;
+//   --container-offset: 15px;
+//   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+//   // colors
+//   --white-color: #FFFFFF;
+//   --black-color: #464646;
+//   --light-blue-color: #0D99FF;
+//   --orange-color: #ED5100;
+// }
+
+  // base
+  $font-family: "Futura PT", -apple-system, BlinkMacSystemFont, Roboto, Open Sans, Helvetica Neue, 'Noto Sans Armenian', 'Noto Sans Bengali', 'Noto Sans Cherokee', 'Noto Sans Devanagari', 'Noto Sans Ethiopic', 'Noto Sans Georgian', 'Noto Sans Hebrew', 'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans Lao', 'Noto Sans Osmanya', 'Noto Sans Tamil', 'Noto Sans Telugu', 'Noto Sans Thai', sans-serif;
+  $content-width: 1275px;
+  $container-offset: 16px;
+  $container-width: calc($content-width + $container-offset * 2);
+
+  // colors
+  $white-color: #FFFFFF;
+  $light-grey-color: #D7D7D7;
+  $grey-color: #979797;
+  $black-color: #464646;
+  $light-blue-color: #0D99FF;
+  $dark-blue-color: #00497E;
+  $orange-color: #ED5100;
+  $red-color: #FF0000;

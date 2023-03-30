@@ -1,0 +1,35 @@
+<header class="header" id="header">
+  <div class="header__container container">
+    <div class="header__inner">
+      <a class="header__logo" href="/">
+        <img src="../img/logo.svg" alt="">
+      </a>
+      <div class="header__nav">
+        <nav class="nav">
+          <a href="#sectionHow" class="nav__item">Как это работает</a>
+          <a href="#thirtyMinSection" class="nav__item">Преимущества</a>
+          <a href="#whyUs" class="nav__item">Условия</a>
+          <a href="#rate" class="nav__item">Тарифы</a>
+          <a href="#contacts" class="nav__item">Контакты</a>
+        </nav>
+      </div>
+      <div class="header__aside">
+        <a class="header__number number" href="tel:+74955454555">
+          <span>+7</span>
+          <span>(495)</span>
+          <span>545 45 55</span>
+        </a>
+        <button class="header__btn btn" data-graph-path="modal-form">
+          Онлайн-заявка
+        </button>
+        <div class="header__account account">
+          <p class="account__text">Личный кабинет</p>
+        </div>
+      </div>
+      <div class="header__burger">
+        @include('./burger.html')
+      </div>
+    </div>
+  </div>
+  @include('./header-mobile.html')
+</header>
